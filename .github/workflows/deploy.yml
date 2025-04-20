@@ -1,0 +1,18 @@
+# This workflow deploys the Docker image to Docker Hub when a new release is published.
+# It builds the Docker image and pushes it to Docker Hub with the release tag.
+name: Deploy Docker Image
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker image
+        run: docker build -t pdf-data-extractor .
+      - name: Push to Docker Hub
+        run: |
+          echo "${{ secrets.dckr_pat_McV4TsQp0eyaf8Bm2_m3Sbm3xZI }}" | docker login -u ${{ secrets.moffatngugi }} --password-stdin
+          docker tag pdf-data-extractor username/pdf-data-extractor:${{ github.moffat-kagiri }}
+          docker push username/pdf-data-extractor:${{ github.moffat-kagiri }}

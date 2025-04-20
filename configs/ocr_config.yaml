@@ -1,6 +1,10 @@
 # Tesseract/EasyOCR params
+# This file contains the configuration for OCR processing using Tesseract and EasyOCR.
+# It specifies the languages to be used, page segmentation mode, and OCR engine mode.
+
 tesseract:
-  lang: eng+fra
-  psm: 6
+  languages: ["eng", "fra"]
+  psm: 6          # Page segmentation mode
+  oem: 1          # OCR engine mode
 easyocr:
-  gpu: false
+  gpu: false      # Disable GPU if unavailable

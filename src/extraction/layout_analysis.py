@@ -1,13 +1,10 @@
-# This script provides functions to analyze the layout of a document image and extract text using OCR.
-# It uses the LayoutParser library for layout analysis and Tesseract for OCR.
-from pdf2image import convert_from_path
+# This module uses LayoutParser to identify layout elements in a document image.
+# -*- coding: utf-8 -*-
+import numpy as np
 import layoutparser as lp
 
-def analyze_layout(image):
-    model = lp.Detectron2LayoutModel("lp://PubLayNet/faster_rcnn_R_50_FPN_3x/config")
+def detect_layout_elements(image: np.ndarray) -> list:
+    """Identify headings, paragraphs, tables using LayoutParser."""
+    model = lp.Detectron2LayoutModel(config_path="configs/layout_config.yaml")
     layout = model.detect(image)
-    return layout
-
-def extract_text_with_ocr(image):
-    import pytesseract
-    return pytesseract.image_to_string(image)
+    return sorted(layout, key=lambda x: x.coordinates[1])  # Sort by Y-position

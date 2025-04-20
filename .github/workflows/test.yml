@@ -1,0 +1,20 @@
+# This is a GitHub Actions workflow file that runs tests on push events.
+# It sets up a Python environment, installs dependencies, and runs tests with coverage reporting.
+name: Run Tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          sudo apt-get install tesseract-ocr
+      - name: Run tests
+        run: |
+          pytest tests/ --cov=src --cov-report=xml
