@@ -1,4 +1,4 @@
-PDF Data Extractor
+#PDF Data Extractor
 Extract structured tables, text, and images from PDFs (typed, scanned, or handwritten)
 
 Demo
@@ -7,10 +7,10 @@ License
 
 A robust Python tool to automatically extract structured data from PDFs—including bank statements, invoices, articles, and forms—while handling typed text, scanned documents, and handwritten notes. Preserves layout, ignores stamps/signatures (saved as images), and outputs clean Excel files.
 
-Key Features
+##Key Features
 ✅ Universal PDF Support
 
-Works with typed text, scanned images, and handwritten content (OCR-powered).
+\item Works with typed text, scanned images, and handwritten content (OCR-powered).
 
 Handles complex layouts (tables, paragraphs, headings) using ML-based detection.
 
