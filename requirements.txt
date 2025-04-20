@@ -1,7 +1,7 @@
 # PDF Processing
 PyPDF2
-pdfplumber
 pdf2image
+pdfplumber==0.10.3
 
 # Image Handling
 OpenCV
@@ -9,15 +9,17 @@ PIL
 
 # OCR
 Tesseract
+pytesseract==0.3.10
 EasyOCR
 
 # Layout analysis
-LayoutParser
+layoutparser==0.3.4
 Detectron2
 
 # Custom Models
 PyTorch
 Tensorflow
+Torch
 
 # Excel output
 pandas
@@ -25,4 +27,4 @@ openpyxl
 XlsxWriter
 
 # Annotation
-Label Studio
+LabelStudio

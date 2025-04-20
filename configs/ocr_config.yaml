@@ -1,0 +1,6 @@
+# Tesseract/EasyOCR params
+tesseract:
+  lang: eng+fra
+  psm: 6
+easyocr:
+  gpu: false
