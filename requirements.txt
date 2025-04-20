@@ -27,5 +27,19 @@ pandas==2.0.3
 openpyxl
 XlsxWriter
 
+# Text Processing
+numpy
+
 # Annotation
 label_studio_sdk
+yolov5
+ow==9.5.0
+
+# Web Framework
+Flask
+Flask-Cors
+Flask-RESTful
+Flask-SocketIO
+Flask-Session
+Flask-Login
+Flask-Mail
