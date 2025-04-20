@@ -1,1 +1,28 @@
+# PDF Processing
+PyPDF2
+pdfplumber
+pdf2image
 
+# Image Handling
+OpenCV
+PIL
+
+# OCR
+Tesseract
+EasyOCR
+
+# Layout analysis
+LayoutParser
+Detectron2
+
+# Custom Models
+PyTorch
+Tensorflow
+
+# Excel output
+pandas
+openpyxl
+XlsxWriter
+
+# Annotation
+Label Studio
