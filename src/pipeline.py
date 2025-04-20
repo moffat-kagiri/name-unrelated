@@ -1,5 +1,19 @@
+# -*- coding: utf-8 -*-
+import argparse
+from src.preprocessing.pdf_to_image import convert_pdf
+from src.extraction.layout_analysis import detect_layout
+from src.postprocessing.structure_data import to_excel
 
-def run_pipeline(pdf_path: str, output_format: str = "excel"):
-    pdf_type, content = preprocess(pdf_path)
-    structured_data = extract(content, pdf_type)
-    export(structured_data, output_format)
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", type=str, required=True)
+    parser.add_argument("--output", type=str, default="output.xlsx")
+    args = parser.parse_args()
+
+    # Pipeline
+    images = convert_pdf(args.input)
+    structured_data = detect_layout(images)
+    to_excel(structured_data, args.output)
+
+if __name__ == "__main__":
+    main()
