@@ -1,20 +1,20 @@
 # PDF Processing
 PyPDF2
 pdf2image
-pdfplumber==0.10.3
-PyYAML==6.0
+pdfplumber
+PyYAML
 
 # Image Handling
-opencv-python==4.8.0
+opencv-python
 PIL
 
 # OCR
 Tesseract
-pytesseract==0.3.10
+pytesseract
 EasyOCR
 
 # Layout analysis
-layoutparser==0.3.4
+layoutparser
 Detectron2
 
 # Custom Models
@@ -23,7 +23,7 @@ Tensorflow
 Torch
 
 # Excel output
-pandas==2.0.3
+pandas
 openpyxl
 XlsxWriter
 
@@ -33,7 +33,7 @@ numpy
 # Annotation
 label_studio_sdk
 yolov5
-ow==9.5.0
+ow
 
 # Web Framework
 Flask
@@ -43,3 +43,11 @@ Flask-SocketIO
 Flask-Session
 Flask-Login
 Flask-Mail
+typing
+
+# Multiple Processing
+multiprocessing
+
+# WebSocket
+websocket-client
+websockets

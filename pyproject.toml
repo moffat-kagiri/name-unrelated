@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "Cython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "name-unrelated"
+version = "0.1.0"
+description = "Document processing and analysis pipeline"
+dependencies = [
+    # PDF Processing
+    "PyPDF2",
+    "pdf2image",
+    "pdfplumber",
+    "PyYAML",
+
+    # Image Handling
+    "opencv-python",
+    "Pillow",  # PIL
+
+    # OCR
+    "pytesseract",
+    "easyocr",
+
+    # Layout Analysis
+    "layoutparser",
+    "detectron2",
+
+    # ML/DL Frameworks
+    "torch",
+    "tensorflow",
+
+    # Data Processing
+    "pandas",
+    "openpyxl",
+    "xlsxwriter",
+    "numpy",
+
+    # Annotation Tools
+    "label-studio-sdk",
+    "yolov5",
+
+    # Web Framework
+    "flask",
+    "flask-cors",
+    "flask-restful",
+    "flask-socketio",
+    "flask-session",
+    "flask-login",
+    "flask-mail",
+
+    # WebSocket
+    "websocket-client",
+    "websockets",
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "black",
+    "isort",
+    "flake8"
+]
